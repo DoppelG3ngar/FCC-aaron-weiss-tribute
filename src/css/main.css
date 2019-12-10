@@ -9,7 +9,9 @@ html {
   margin: 0;
   color: #000;
 }
-
+header {
+  height: 100%;
+}
 .bgimg-1 {
   position: relative;
   background-position: 25% 15%;
@@ -34,6 +36,53 @@ html {
   background-color: #111;
   color: #fff;
   padding: 10px;
-  font-size: 5em;
+  font-size: 7vh;
   font-family: mwYFont;
+}
+
+#albums {
+  width: 66%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "album1 album1 album2"
+    "album3 album5 album5"
+    "album6 album7 album7";
+}
+.block {
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  background: black;
+  opacity: 0.8;
+}
+#album1 {
+    grid-area: "album1";
+    background-color: aquamarine;
+}
+#album2 {
+    grid-area: "album2";
+    background-color: #123;
+}
+#album3 {
+    grid-area: "album3";
+    background-color: #456;
+}
+#album4 {
+    grid-area: "album4";
+    background-color: #789;
+}
+#album5 {
+    grid-area: "album5";
+    background-color: #753;
+}
+#album6 {
+    grid-area: "album6";
+    background-color: #159;
+}
+#album7 {
+    grid-area: "album7";
+    background-color: #963;
 }
