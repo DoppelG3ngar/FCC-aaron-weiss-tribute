@@ -31,7 +31,6 @@ header {
   text-align: center;
   color: #000;
 }
-
 .caption span.border {
   background-color: #111;
   color: #fff;
@@ -39,12 +38,17 @@ header {
   font-size: 7vh;
   font-family: mwYFont;
 }
-.grid-container {
-  width: 55%;
-  height: 100vh;
+#main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 55% 45%;
+}
+.grid-container {
+  margin: 2vh;
+  /* width: 5vh; */
+  height: 96vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-template-areas:
     ".   .   ab1 ab1 .     ."
     "ab2 ab2 ab1 ab1 ab6 ab6"
@@ -52,8 +56,13 @@ header {
     "ab4 ab4 ab3 ab3 ab7 ab7"
     "ab4 ab4 ab5 ab5 ab7 ab7"
     ".   .   ab5 ab5 .     .";
+  gap: 15px 15px;
 }
-
+.block img {
+  border: black 2px solid;
+  max-width: 100%;
+  max-height: 100%;
+}
 .ab1 {
   grid-area: ab1;
 }
@@ -80,4 +89,20 @@ header {
 
 .ab7 {
   grid-area: ab7;
+}
+
+#album-description {
+  padding: 25px;
+  margin: auto 5%;
+  border: black 2px solid;
+}
+#album-description h2 {
+  margin: 5px 0;
+}
+#album-description ul {
+  margin: 0;
+  padding: 0;
+}
+#album-description li{
+  list-style-type: none;
 }
