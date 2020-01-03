@@ -38,7 +38,7 @@ header {
   font-size: 7vh;
   font-family: mwYFont;
 }
-#main {
+#albums {
   display: grid;
   grid-template-columns: 55% 45%;
 }
